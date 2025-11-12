@@ -1,8 +1,10 @@
-# Linux Programming Project
+# <ins>**Linux Programming Project**</ins>
 
 ### Aryansh Sahni
 7th Semester project for LINUX CS4154
 
+
+## <ins>**ABOUT THE PROJECT**</ins>
 **I. How It Works**
 
 1. Multiple Simulated Sensors (Parallel Processes) :
