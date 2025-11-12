@@ -1,6 +1,11 @@
-I. How It Works
+# Linux Programming Project
 
-1. Multiple Simulated Sensors (Parallel Processes)
+###Aryansh Sahni
+7th Semester project for LINUX CS4154
+
+**I. How It Works**
+
+1. Multiple Simulated Sensors (Parallel Processes) :
 
     Each sensor is a separate background process (launched using &).
 
@@ -8,13 +13,13 @@ I. How It Works
 
     Every new reading (which includes the sensor ID, its value, and a timestamp) is immediately appended to a shared log file located at /tmp/sensor_data.txt.
 
-2. Central Data Collection
+2. Central Data Collection :
 
     The file /tmp/sensor_data.txt acts as the central, shared data repository.
 
     All sensor processes write their data into this single file, simulating how multiple physical sensors would send their telemetry to a central system or logging server. This file acts as a simple, thread-safe log.
 
-3. Real-Time Plotting
+3. Real-Time Plotting :
 
     A dedicated function, the "plotter," runs continuously in the main part of the script.
 
@@ -24,7 +29,7 @@ I. How It Works
 
     Finally, it prints a simple ASCII bar graph in the console for each sensor, visualizing its latest value.
 
-4. Clean Shutdown (Signal Handling)
+4. Clean Shutdown (Signal Handling) :
 
     The script uses the trap command to ensure a graceful exit.
 
@@ -32,7 +37,7 @@ I. How It Works
        It stops all running background sensor processes.
        It removes the temporary data file (/tmp/sensor_data.txt), cleaning up the system before the script terminates.
 
-II. Key Technologies & Commands
+**II. Key Technologies & Commands**
 
 The script is built using Bash shell scripting and relies on:
         &: To launch the sensor functions as background processes.
