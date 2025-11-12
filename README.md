@@ -1,4 +1,4 @@
-How It Works
+I. How It Works
 
 1. Multiple Simulated Sensors (Parallel Processes)
 
@@ -29,23 +29,15 @@ How It Works
     The script uses the trap command to ensure a graceful exit.
 
     When the user presses Ctrl+C, the trap handler executes:
-
        It stops all running background sensor processes.
+       It removes the temporary data file (/tmp/sensor_data.txt), cleaning up the system before the script terminates.
 
-        It removes the temporary data file (/tmp/sensor_data.txt), cleaning up the system before the script terminates.
-
-Key Technologies & Commands
+II. Key Technologies & Commands
 
 The script is built using Bash shell scripting and relies on:
-
-    &: To launch the sensor functions as background processes.
-
-    >>: For file redirection, appending data to the shared log file.
-
-    trap: To handle the script interruption signal (Ctrl+C) for a clean exit.
-
-    grep, awk, tail: Used by the plotter to parse and extract the latest data from the log file.
-
-    sleep and RANDOM: For controlling timing and generating simulated sensor data.
-
-    clear: To refresh the display for the real-time visualization effect.
+        &: To launch the sensor functions as background processes.
+        >>: For file redirection, appending data to the shared log file.
+        trap: To handle the script interruption signal (Ctrl+C) for a clean exit.
+        grep, awk, tail: Used by the plotter to parse and extract the latest data from the log file.
+        sleep and RANDOM: For controlling timing and generating simulated sensor data.
+        clear: To refresh the display for the real-time visualization effect.
