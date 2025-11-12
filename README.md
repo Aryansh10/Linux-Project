@@ -1,6 +1,6 @@
 # Linux Programming Project
 
-###Aryansh Sahni
+### Aryansh Sahni
 7th Semester project for LINUX CS4154
 
 **I. How It Works**
